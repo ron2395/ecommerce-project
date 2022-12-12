@@ -13,3 +13,55 @@ code {
 main {
   min-height: 80vh;
 }
+
+select {
+  width: 1rem;
+  height: 3rem;
+}
+
+.nav-item {
+  margin-right: 0 !important;
+}
+
+.user-name {
+  text-transform: capitalize;
+}
+
+/* carousel */
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+.carousel img {
+  height: 27rem;
+  width: 40rem;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+.carousel a {
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .search-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
