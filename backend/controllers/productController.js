@@ -6,7 +6,7 @@ import Product from '../models/productModel.js';
 // @access Public
 
 export const getProducts = asyncHandler(async(req, res) => {
-  const pageSize = 12;
+  const pageSize = 2;
   const page = Number(req.query.pageNumber) || 1;
 
   const keyword = req.query.keyword ? {
@@ -69,7 +69,7 @@ export const createProduct = asyncHandler(async (req, res) => {
     countInStock: 0,
     numReviews: 0,
     description: "sample description",
-    image: "/images/alexa.jpg",
+    image: "/images/placeholder.jpg",
   });
 
   const createdProduct = await product.save()
