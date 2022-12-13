@@ -1,3 +1,9 @@
 .index-card:hover {
     transform: scale(1.07);
 }
+
+@media (min-width: 992px) {
+.index-card {
+        height: 28rem;
+    }
+}
