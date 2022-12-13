@@ -1,4 +1,4 @@
-import axios from 'axios';
+import API from '../api';
 import {
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCESS,
@@ -39,8 +39,8 @@ export const register = (name, email, password) => async(dispatch) => {
         },
       };
 
-      const { data } = await axios.post(
-        "/api/users",
+      const { data } = await API.post(
+        "api/users",
         { name, email, password },
         { config }
       );
@@ -79,7 +79,7 @@ export const login = (email, password) => async(dispatch) => {
             }
         }
 
-        const { data } = await axios.post('/api/users/login', { email, password }, config )
+        const { data } = await API.post('api/users/login', { email, password }, config )
 
         dispatch({
             type: USER_LOGIN_SUCCESS,
@@ -124,7 +124,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/users/${id}`, config);
+    const { data } = await API.get(`api/users/${id}`, config);
 
     dispatch({
       type: USER_DETAILS_SUCCESS,
@@ -160,7 +160,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.put(`/api/users/profile`, user, config);
+    const { data } = await API.put(`api/users/profile`, user, config);
 
     dispatch({
       type: USER_PROFILE_UPDATE_SUCCESS,
@@ -200,7 +200,7 @@ export const getUserList = () => async(dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    const { data } = await axios.get('/api/users', config)
+    const { data } = await API.get('api/users', config)
 
     dispatch({
       type: USER_LIST_SUCCESS,
@@ -231,7 +231,7 @@ export const destroyUser = (id) => async (dispatch, getState) => {
       },
     };
     
-    await axios.put(`/api/users/${id}/edit`, config);
+    await API.put(`api/users/${id}/edit`, config);
 
     dispatch({
       type: USER_DELETE_SUCCESS,
@@ -261,7 +261,7 @@ export const updateUser = (user) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.put(`/api/users/${user._id}`, user, config);
+    const { data } = await API.put(`api/users/${user._id}`, user, config);
 
     dispatch({
       type: USER_UPDATE_SUCCESS

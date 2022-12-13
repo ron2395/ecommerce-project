@@ -1,4 +1,4 @@
-import axios from 'axios';
+import API from '../api';
 import { useEffect, useState, Fragment } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Col, Row, Form, Button, Spinner } from 'react-bootstrap';
@@ -77,7 +77,7 @@ const ProductEditScreen = () => {
                 'Content-Type': 'multipart/form-data'
             }
         }
-        const { data } = await axios.post('/api/upload', formData, config);
+        const { data } = await API.post('/api/upload', formData, config);
 
         setImage(data)
         setUploading(false)

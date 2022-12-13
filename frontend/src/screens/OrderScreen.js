@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from "react";
-import axios from 'axios';
+import API from '../api';
 import { PayPalButton } from 'react-paypal-button-v2';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import {
@@ -45,7 +45,7 @@ const OrderScreen = () => {
     }
 
     const addPaypalScript = async () => {
-      const { data: clientId } = await axios.get("/api/config/paypal");
+      const { data: clientId } = await API.get("/api/config/paypal");
       const script = document.createElement("script");
       script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}`;
       script.type = "text/javascript";
