@@ -27,7 +27,9 @@ export const listProducts = (keyword = '', pageNumber = '') => async(dispatch) =
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST });
 
-    const { data } = await axios.get(`/api/products/?keyword=${keyword}&pageNumber=${pageNumber}`);
+    const { data } = await axios.get(
+      `https://mern-ecommerce-api-cczd.onrender.com/api/products/?keyword=${keyword}&pageNumber=${pageNumber}`
+    );
 
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     } catch (error) {
@@ -45,7 +47,9 @@ export const listProductDetails = (id) => async(dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAIL_REQUEST });
 
-    const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await axios.get(
+      `https://mern-ecommerce-api-cczd.onrender.com/api/products/${id}`
+    );
 
     dispatch({ type: PRODUCT_DETAIL_SUCCESS, payload: data });
     } catch (error) {

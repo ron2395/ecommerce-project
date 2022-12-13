@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://mern-ecommerce-api-cczd.onrender.com",
+  "proxy": "localhost:3800",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
