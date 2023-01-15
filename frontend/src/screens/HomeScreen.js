@@ -25,10 +25,14 @@ const HomeScreen = () => {
   return (
     <Fragment>
       <Meta />
-      {!keyword
-      ? <ProductCarousel />
-      : <Link to='/' className='btn btn-light'
-      >Go Back</Link>}
+      {!keyword ? (
+        <ProductCarousel />
+      ) : (
+        <Link to='/' className='btn btn-light'>
+          Go Back
+        </Link>
+      )}
+      <hr />
       <h1 className='text-center mt-4'>Latest Products</h1>
       {loading ? (
         <Loader />

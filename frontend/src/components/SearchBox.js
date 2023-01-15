@@ -26,8 +26,8 @@ const SearchBox = () => {
             />
             <Button
             type='submit'
-            variant='outline-success'
-            className='p-2'
+            variant='dark'
+            className='ms-2'
             >
                 Search
             </Button>

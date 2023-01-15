@@ -44,16 +44,16 @@ select {
 }
 
 .carousel-caption h2 {
-  color: #fff;
-  text-shadow: 3px 3px rgba(0, 0, 0, 0.8);
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .carousel img {
   height: 27rem;
-  width: 40rem;
+  width: auto;
   padding: 30px;
-  border-radius: 50%;
 }
+
 
 .carousel a {
   margin: 0 auto;

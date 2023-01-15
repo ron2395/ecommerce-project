@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg='dark' expand='lg' collapseOnSelect variant='dark'>
+      <Navbar bg='primary' expand='lg' collapseOnSelect variant='dark'>
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>Anywhere Store</Navbar.Brand>
@@ -27,7 +27,7 @@ const Header = () => {
             <Nav className='ms-auto'>
               <SearchBox />
               <LinkContainer to='/cart'>
-                <Nav.Link>
+                <Nav.Link className='text-white'>
                   <i className='fa-solid fa-cart-shopping' />
                   <span className='ps-2'>Cart</span>
                 </Nav.Link>
@@ -44,13 +44,13 @@ const Header = () => {
               ) : (
                 <Fragment>
                   <LinkContainer to='/login'>
-                    <Nav.Link>
+                    <Nav.Link className='text-white'>
                       <i className='fa-solid fa-user' />
                       <span className='ps-2'>Sign in</span>
                     </Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/register'>
-                    <Nav.Link>
+                    <Nav.Link className='text-white'>
                       <span className='ps-2'>Register</span>
                     </Nav.Link>
                   </LinkContainer>

@@ -47,7 +47,7 @@ const RegisterScreen = () => {
       </Col>
       <Col lg={4} md={6}>
         <Row>
-          <h1 className='mb-3'>SIGN UP</h1>
+          <h1 className='mb-3'>REGISTER</h1>
           {error ? <Message variant='danger'>{error}</Message> : null}
           {message ? <Message variant='danger'>{message}</Message> : null}
           <Form onSubmit={submitHandler}>
